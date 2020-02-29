@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" href="https://cdn.rawgit.com/jgthms/minireset.css/master/minireset.css"> -->
+    <link rel="stylesheet" href="css/debug.css">
+		<link rel="stylesheet" type="text/css" href="css/product_style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	</head>
+	<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+      <div class="cart">
+        <p>Cart({{cart.length}})</p>
+      </div>
+      <product :premium="premium"
+         @add-to-cart="updateCart"
+         @remove-from-cart="removeFromCart"></product>
+    </div>
+		<script src="main.js"></script>
+
+	</body>
+</html>
